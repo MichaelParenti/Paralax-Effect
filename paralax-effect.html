@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralax Effect</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 1550px;
+            background: linear-gradient(to right,#630063,#ffffff,#630063);
+        }
+        #circle{
+            background: blue;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            margin-top: 200px;
+            position: absolute;
+            z-index: 2;
+            margin-left: 38.75%;
+        }
+        #rectangle{
+            background: black;
+            width: 400px;
+            height: 100px;
+            margin-top: 300px;
+            position: absolute;
+            z-index: 1;
+        }
+        #lorem{
+            font-size:28px;
+            color: white;
+            margin-top: 325px;
+            position: absolute;
+            font-family: Arial Black;
+            z-index: 3;
+        }
+        #background{
+            position: absolute;
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            top:900px;
+            width: 500px;
+            }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <div id="rectangle"></div>
+    <div id="lorem">Lorem ipsum</div>
+
+    <div id="background">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi esse rerum modi nihil, vitae, tempore ut quia dolore sed blanditiis autem ipsam nisi ullam nesciunt magnam recusandae ex quisquam sit voluptatem facere perspiciatis velit quos. Architecto hic, debitis beatae voluptatem exercitationem iste, eaque magni porro possimus quos unde similique praesentium aliquid, quo quibusdam! Aliquid animi esse tempora fuga error asperiores vero omnis sunt quas. Dolorum iusto quia ab impedit aspernatur quasi optio, cumque odio, magnam corrupti expedita doloremque beatae iste, accusamus exercitationem veritatis temporibus? Exercitationem laboriosam architecto delectus facere, at tenetur beatae illo repudiandae alias voluptate nobis consectetur officiis maxime, est amet cum? Nihil ea tempore perspiciatis commodi cupiditate est perferendis consequuntur, placeat ducimus voluptatibus reiciendis odit at delectus dicta ipsa itaque veritatis! Modi animi nostrum aspernatur voluptatibus, iure dolor reprehenderit illo qui culpa veritatis, molestiae at deleniti facilis in sint dolorum eos! Possimus cum commodi sint reprehenderit deleniti saepe quae atque excepturi dignissimos aliquam! Earum corrupti quam hic fugiat nesciunt fuga, repudiandae labore, accusantium amet sit recusandae reiciendis ratione sapiente esse at excepturi tempora veniam ullam commodi iure. Laboriosam sunt iure ut, id eveniet dicta adipisci commodi cumque similique voluptates assumenda error, doloremque ex quas rem voluptatum repellendus cum nesciunt temporibus! Aliquid ratione ipsa nesciunt autem cum iure. Est, natus cum praesentium quos harum totam illum vitae voluptates quo adipisci sit aliquam nemo ex. Nihil exercitationem rerum ad quis impedit id laborum rem ipsum illum possimus eaque maxime aliquam a delectus accusantium, adipisci repudiandae unde quaerat animi sapiente nam? Sint consectetur rem ullam sunt voluptatibus, minima dolor! Ad harum omnis, incidunt nam debitis laboriosam eaque. Laboriosam perferendis suscipit odit nesciunt alias itaque vel fugiat tempore necessitatibus temporibus labore ea iste expedita quos ipsa fugit, iusto deleniti! Accusamus cumque minus mollitia eveniet voluptates sapiente quidem! Ad quia dolor quasi iste?</p>
+    </div>
+
+    <script>
+            let circle = document.getElementById("circle");
+            let rectangle = document.getElementById("rectangle");
+            let text = document.getElementById("lorem");
+
+        window.addEventListener("scroll", () => {
+
+            var y = window.scrollY;
+
+            circle.style.top = -y * 1.5 + "px";
+            circle.style.left = -y * 4.5 + "px";
+
+            rectangle.style.top = y * 0.5 + "px";
+
+            text.style.top = y * 0.5 + "px";
+
+        });
+    </script>
+</body>
+</html>
